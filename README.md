@@ -17,7 +17,7 @@ window.b // undefined
 ```
 上面代码中，全局变量a由var命令声明，所以它是顶层对象的属性；全局变量b由let命令声明，所以它不是顶层对象的属性，返回undefined。
 
-## demo02:destructuring
+## demo02:Destructuring
 1. array.js
 数组的解构赋值
 本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。
@@ -33,3 +33,16 @@ window.b // undefined
 - 从函数中返回多个值
 - 提取JSON数据
 - for of 遍历map，获取键值
+
+## demo03:Extention of String
+1. stringExtention.js
+字符串api的扩展，其中包含了扩展api的demo演示
+
+## demo04:Extention of Number
+1. numberExtention.js
+Number类的扩展
+2. mathExtention.js
+Math类的扩展
+
+## demo05:Extention of Array
+1. arrayExtention.js
