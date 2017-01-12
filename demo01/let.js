@@ -1,4 +1,4 @@
-/*
+/**
  * let是局部变量，只在当前代码块有效
  * */
 function testLetAndVar() {
@@ -11,7 +11,7 @@ function testLetAndVar() {
 }
 // testLetAndVar();
 
-/*
+/**
  * 在for循环中使用var的一个demo
  * */
 function testVarInFor() {
@@ -27,7 +27,7 @@ function testVarInFor() {
 }
 // testVarInFor();
 
-/*
+/**
  * 在for循环中使用let的一个demo
  * */
 function testLetInFor() {
@@ -43,7 +43,7 @@ function testLetInFor() {
 // testLetInFor();
 
 
-/*
+/**
  * 下面代码中，存在全局变量tmp，但是块级作用域内let又声明了一个局部变量tmp，
  * 导致后者绑定这个块级作用域，所以在let声明变量前，对tmp赋值会报错。
  * */
@@ -57,7 +57,7 @@ function testLetScope() {
 }
 // testLetScope();
 
-/*
+/**
  * ES5只有全局作用域和函数作用域，没有块级作用域，内层变量可能会覆盖外层变量。
  * 同时，这个demo说明函数中还可以定义函数
  * */
@@ -75,7 +75,7 @@ function testVarOverride() {
 }
 // testVarOverride();
 
-/*
+/***
  * ES6的块级作用域解决了上面问题
  * */
 function testLetBlock() {

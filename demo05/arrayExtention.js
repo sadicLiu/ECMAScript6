@@ -185,7 +185,7 @@ function testEmptyInArray() {
     console.log(Array(3));
 
     // ES6明确将空位转为undefined
-    console.log(Array.from(['a',,'b']));
+    console.log(Array.from(['a', , 'b']));
 }
 testEmptyInArray();
 

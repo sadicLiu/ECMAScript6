@@ -7,8 +7,8 @@ function testConst() {
 }
 // testConst();
 
-/*
- *const的作用域与let命令相同：只在声明所在的块级作用域内有效。
+/**
+ * const的作用域与let命令相同：只在声明所在的块级作用域内有效。
  * */
 function testConstScope() {
     if (true) {
@@ -18,7 +18,7 @@ function testConstScope() {
 }
 // testConstScope();
 
-/*
+/**
  * const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。
  * */
 function testConstDefine() {
@@ -29,9 +29,9 @@ function testConstDefine() {
 }
 // testConstDefine();
 
-/*
-* 冻结对象
-* */
+/**
+ * 冻结对象
+ * */
 function testObjFreeze() {
     const foo = Object.freeze({});
 
