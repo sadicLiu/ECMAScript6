@@ -7,7 +7,22 @@
 4. 在看这个文档之前你应该弄清楚JavaScript和ECMAScript的区别
 5. 下面的内容是对每一个demo文件夹里的js文件有哪些内容进行的说明，说明内容基本上就是我在js文件中给每个函数写的注释，然后用jsdoc生成了js文档，把这些文档内容拿了过来
 
-## demo01:let and const
+## 编码规范
+1. js文件命名采用驼峰命名法
+2. js文件中的注释格式是以`/**`开头的注释，因为要用到[jsdoc](https://github.com/jsdoc3/jsdoc)这个插件生成文档，而这个插件默认会忽略以`/*`开头的注释
+3. js中的每个函数都以test开头
+
+## Index
+1. [Demo01:let and const](#demo01let-and-const)
+1. [Demo02:Destructuring](#demo02destructuring)
+1. [Demo03:Extention of String](#demo03extention-of-string)
+1. [Demo04:Extention of Number](#demo04extention-of-number)
+1. [Demo05:Extention of Array](#demo05extention-of-array)
+1. [Demo06:Extention of Function](#demo06extention-of-function)
+1. [Demo07:Extention of Object](#demo07extention-of-object)
+1. [Demo08:Symbol](#demo08symbol)
+
+## Demo01:let and const
 ### let.js
 - let不像var那样会发生“变量提升”现象。所以，变量一定要在声明后使用，否则报错。
 - testLetAndVar()  
@@ -40,7 +55,7 @@ const命令声明的常量也是不提升，同样存在暂时性死区，只能
 - testObjFreeze()  
 冻结对象
 
-## demo02:Destructuring
+## Demo02:Destructuring
 ### array.js
 数组的解构赋值
 本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。
@@ -57,20 +72,20 @@ const命令声明的常量也是不提升，同样存在暂时性死区，只能
 - 提取JSON数据
 - for of 遍历map，获取键值
 
-## demo03:Extention of String
+## Demo03:Extention of String
 ### stringExtention.js
 字符串api的扩展，其中包含了扩展api的demo演示
 
-## demo04:Extention of Number
+## Demo04:Extention of Number
 ### numberExtention.js
 Number类的扩展
 ### mathExtention.js
 Math类的扩展
 
-## demo05:Extention of Array
+## Demo05:Extention of Array
 ### arrayExtention.js
 
-## demo06:Extention of Function
+## Demo06:Extention of Function
 ### functionExtention.js
 ### forceParam.js
 利用函数参数的默认值，实现强制函数必须有参数，否则报错
@@ -82,7 +97,28 @@ rest参数搭配的变量是一个数组，该变量将多余的参数放入数�
 ### arrowFunction.js
 箭头函数
 
-## demo07:Extention of Object
+## Demo07:Extention of Object
+### objectExtention.js
+
+## Demo08:Symbol
+### symbol.js
+- ES6引入了一种新的原始数据类型Symbol，表示独一无二的值。它是JavaScript语言的第七种数据类型，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）
+- 判断数据类型的三种方式：typeof、instanceof、Object.prototype.toString.call(variable)
+- Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分
+- 由于每一个Symbol值都是不相等的，这意味着Symbol值可以作为标识符，用于对象的属性名，就能保证不会出现同名的属性。这对于一个对象由多个模块构成的情况非常有用，能防止某一个键被不小心改写或覆盖。
+- testSymbol()
+  Symbol的使用
+- testObjectProperty()
+  Symbol用于对象的属性名
+- testObjectFunction()
+  Symbol用于对象的方法名
+- testSymbolInSwitch()
+  Symbol适合用在switch的条件中，消除魔术字符串
+
+## Demo09:Set and Map
+### set.js
+
+
 
 
 
