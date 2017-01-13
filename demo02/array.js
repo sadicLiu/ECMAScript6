@@ -1,6 +1,6 @@
 "use strict";
 
-/*
+/**
  * 解构（Destructuring）的方式为变量赋值
  * */
 function testAsignValue() {
@@ -17,7 +17,7 @@ function testAsignValue() {
 }
 // testAsignValue();
 
-/*
+/**
  * 赋值时可以设置默认值
  * */
 function testDefaultValue() {

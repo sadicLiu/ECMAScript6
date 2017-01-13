@@ -1,6 +1,6 @@
 "use strict";
 
-/*
+/**
  * 交换两个变量的值
  * */
 function swap() {
@@ -11,7 +11,7 @@ function swap() {
 }
 swap();
 
-/*
+/**
  * 从函数中返回多个值
  * */
 function getValuesFromFunction() {
@@ -36,7 +36,7 @@ function getValuesFromFunction() {
 }
 getValuesFromFunction();
 
-/*
+/**
  * 提取JSON数据
  * */
 function extractJSONData() {
@@ -50,7 +50,7 @@ function extractJSONData() {
 }
 extractJSONData();
 
-/*
+/**
  * for of 获取map中的键值
  * */
 function mapVisit() {

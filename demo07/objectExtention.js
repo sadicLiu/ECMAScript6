@@ -1,6 +1,6 @@
 'use strict';
 
-/*对象的定义，现在可以直接用变量名定义*/
+/**对象的定义，现在可以直接用变量名定义*/
 function testObjectDefine() {
     let foo = 'bar';
     let baz = {foo};
@@ -28,7 +28,7 @@ function testObjectDefine() {
 }
 // testObjectDefine();
 
-/*
+/**
  * 相等运算符（==）和严格相等运算符（===）
  * 前者会自动转换数据类型，后者的NaN不等于自身，以及+0等于-0
  * Object.is比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致
@@ -52,7 +52,7 @@ function testEqual() {
 }
 // testEqual();
 
-/*
+/**
  * Object.assign方法用于对象的合并
  * 将源对象（source）的所有可枚举属性，复制到目标对象（target）
  * */
@@ -66,7 +66,7 @@ function testMergeObject() {
 }
 // testMergeObject();
 
-/*
+/**
  * 对象的每个属性都有一个描述对象（Descriptor），用来控制该属性的行为
  * Object.getOwnPropertyDescriptor方法可以获取该属性的描述对象
  * */
@@ -74,7 +74,7 @@ function testObjectDescriptor() {
     let obj = {foo: 123};
     let descriptor = Object.getOwnPropertyDescriptor(obj, 'foo');
     console.log(descriptor);
-    /*
+    /**
      {
      value: 123,
      writable: true,
@@ -85,7 +85,7 @@ function testObjectDescriptor() {
 }
 // testObjectDescriptor();
 
-/*
+/**
  * Object.keys()，Object.values()，Object.entries()遍历对象
  * */
 function testVisitObject() {
@@ -96,11 +96,11 @@ function testVisitObject() {
         console.log(key); // 'a', 'b', 'c'
     }
 
-    /*for (let value of values(obj)) {
+    /**for (let value of values(obj)) {
         console.log(value); // 1, 2, 3
     }*/
 
-    /*for (let [key, value] of entries(obj)) {
+    /**for (let [key, value] of entries(obj)) {
         console.log([key, value]); // ['a', 1], ['b', 2], ['c', 3]
     }*/
 

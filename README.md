@@ -22,6 +22,7 @@
 1. [Demo07:Extention of Object](#demo07extention-of-object)
 1. [Demo08:Symbol](#demo08symbol)
 1. [Demo09:Set and Map](#demo09set-and-map)
+1. [Demo10:Class](#demo10class)
 
 ## Demo01:let and const
 
@@ -50,7 +51,7 @@ ES5只有全局作用域和函数作用域，没有块级作用域，内层变�
   let b = 1;
   window.b // undefined
   ```
-上面代码中，全局变量a由var命令声明，所以它是顶层对象的属性；全局变量b由let命令声明，所以它不是顶层对象的属性，返回undefined
+  上面代码中，全局变量a由var命令声明，所以它是顶层对象的属性；全局变量b由let命令声明，所以它不是顶层对象的属性，返回undefined
 - testConstScope()  
 const的作用域与let命令相同：只在声明所在的块级作用域内有效。
 - testConstDefine()  
@@ -61,62 +62,138 @@ const命令声明的常量也是不提升，同样存在暂时性死区，只能
 ## Demo02:Destructuring
 
 ### array.js
-数组的解构赋值
-本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。
+- 数组的解构赋值  
+- 本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。
+- testAsignValue()  
+解构（Destructuring）的方式为变量赋值
+- testDefaultValue()  
+赋值时可以设置默认值
 
 ### object.js
-对象的解构赋值
+- 对象的解构赋值
 
 ### string.js
-字符串的解构赋值
+- 字符串的解构赋值
 
 ### function.js
-函数参数中的解构赋值
+- 函数参数中的解构赋值
 
 ### apply.js
-解构赋值的一些典型应用
-- 交换两个变量的值
-- 从函数中返回多个值
-- 提取JSON数据
-- for of 遍历map，获取键值
+解构赋值的一些典型应用:
+- swap()  
+交换两个变量的值
+- getValuesFromFunction()  
+从函数中返回多个值
+- extractJSONData()  
+提取JSON数据
+- mapVisit()
+for of 获取map中的键值
 
 ## Demo03:Extention of String
 
 ### stringExtention.js
-字符串api的扩展，其中包含了扩展api的demo演示
+- testTemplateString()  
+模板字符串
+- testFunctionInTemplateString()  
+在模板字符串中调用函数
+- testStringIterator()  
+ES6为字符串添加了遍历器接口，使得字符串可以被for...of循环遍历。
+- testNewStringAPI()  
+新的api提供的函数includes(), startsWith(), endsWith()
+- testRepeat()  
+repeat()函数
 
 ## Demo04:Extention of Number
 
 ### numberExtention.js
-Number类的扩展
+- testIsFinite()  
+isFinite()函数, 用来检查一个数值是否为有限的
+- testIsNaN()  
+isNaN()函数，用来检查一个值是否为NaN
+- testParse()  
+ES6将全局方法parseInt()和parseFloat()，移植到Number对象上面，行为完全保持不变。 这样做的目的，是逐步减少全局性方法，使得语言逐步模块化。
+- testIsInteger()  
+Number.isInteger()用来判断一个值是否为整数 需要注意的是，在JavaScript内部，整数和浮点数是同样的储存方法 所以3和3.0被视为同一个值。
 
 ### mathExtention.js
-Math类的扩展
+- testTrunc()  
+Math.trunc方法用于去除一个数的小数部分，返回整数部分。
+- testSign()  
+Math.sign方法用来判断一个数到底是正数、负数、还是零
 
 ## Demo05:Extention of Array
 
 ### arrayExtention.js
+- testArrayFrom()  
+下面是一个类似数组的对象，Array.from将它转为真正的数组
+- testArrayFrom2()  
+只要是部署了Iterator接口的数据结构，Array.from都能将其转为数组
+- testArrayFrom3()  
+Array.from还可以接受第二个参数，作用类似于数组的map方法 用来对每个元素进行处理，将处理后的值放入返回的数组
+- testConvertArray()  
+将数组中布尔值为false的成员转为0
+- testGetTypes()  
+返回各种数据的类型
+- testInitArray()  
+利用Array.from方法还可以初始化一个数组
+- testArrayOf()  
+Array.of方法用于将一组值，转换为数组
+- testArrayFind()  
+数组实例的find方法，用于找出第一个符合条件的数组成员
+- testArrayFindIndex()  
+findIndex返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1
+- testArrayFill()  
+fill方法使用给定值，填充一个数组
+- testKeysAndValues()  
+keys()和values()——用于遍历数组
+- testEntries()  
+entries()是对键值对的遍历
+- testIncludes()  
+Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值
 
 ## Demo06:Extention of Function
 
 ### functionExtention.js
+- testDefaultParam()  
+ES6之前，为参数指定默认值的方式
+- testDefaultParamInES6()  
+ES6的写法
+- testFunctionLength()  
+指定了默认值以后，函数的length属性，将返回没有指定默认值的参数个数
 
 ### forceParam.js
-利用函数参数的默认值，实现强制函数必须有参数，否则报错
+- 利用函数参数的默认值，实现强制函数必须有参数，否则报错
 
 ### rest.js
 ES6引入rest参数（形式为“...变量名”），用于获取函数的多余参数，这样就不需要使用arguments对象了。
 rest参数搭配的变量是一个数组，该变量将多余的参数放入数组中。
 
 ### ....js
-扩展运算符的应用
+扩展运算符的应用:
+- testConcatArray()  
+合并数组
+- getStringLength()  
+获取字符串的长度
 
 ### arrowFunction.js
-箭头函数
+- basicUseage()  
+箭头函数基本用法
+- params()  
+如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分
 
 ## Demo07:Extention of Object
 
 ### objectExtention.js
+- testObjectDefine()  
+对象的定义，现在可以直接用变量名定义
+- testEqual()  
+相等运算符（==）和严格相等运算符（===） 前者会自动转换数据类型，后者的NaN不等于自身，以及+0等于-0 Object.is比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致 不同之处只有两个：一是+0不等于-0，二是NaN等于自身
+- testMergeObject()  
+Object.assign方法用于对象的合并 将源对象（source）的所有可枚举属性，复制到目标对象（target）
+- testObjectDescriptor()  
+对象的每个属性都有一个描述对象（Descriptor），用来控制该属性的行为 Object.getOwnPropertyDescriptor方法可以获取该属性的描述对象
+- testVisitObject()  
+Object.keys()，Object.values()，Object.entries()遍历对象
 
 ## Demo08:Symbol
 
@@ -136,13 +213,13 @@ Symbol适合用在switch的条件中，消除魔术字符串
 
 ## Demo09:Set and Map
 
-### 1-setInit.js
+### setInit.js
 - testInitSet()  
 初始化一个Set 它类似于数组，但是成员的值都是唯一的，没有重复的值
 - testRemoveDuplicateElementFromArray()  
 去除数组中重复成员的方法
 
-### 2-setOperation.js
+### setOperation.js
 - testSetAPI()  
 add(value)：添加某个值，返回Set结构本身。 delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。 has(value)：返回一个布尔值，表示该值是否为Set的成员。 clear()：清除所有成员，没有返回值。
 - testConvertSetToArray()  
@@ -150,7 +227,7 @@ Array.from方法可以将Set结构转为数组
 - testDeDupe()  
 去除数组重复元素的方法
 
-### 3-setVisit.js
+### setVisit.js
 - Set结构的实例有四个遍历方法，可以用于遍历成员
   keys()：返回键名的遍历器
   values()：返回键值的遍历器
@@ -165,10 +242,17 @@ forEach方法遍历Set
 - testOperate()  
 使用Set可以很容易地实现并集（Union）、交集（Intersect）和差集（Difference）
 
-### 1-mapInit.js
+### mapInit.js
 - testMapInit()  
 初始化一个Map并进行常用操作
 
-### 2-mapVisit.js
+### mapVisit.js
 - testMapVisit()  
 遍历Map的操作
+
+## Demo10:Class
+- constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。
+- 私有方法是常见需求，但ES6不提供，只能通过变通方法模拟实现。
+- Bar.js
+- ColorPoint.js
+- Person.js

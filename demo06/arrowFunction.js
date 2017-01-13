@@ -1,6 +1,8 @@
 "use strict";
 
-/*箭头函数基本用法*/
+/**
+ * 箭头函数基本用法
+ * */
 function basicUseage() {
     let f = v => v;
 
@@ -13,7 +15,9 @@ function basicUseage() {
 }
 // basicUseage();
 
-/*如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分*/
+/**
+ * 如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分
+ * */
 function params() {
     let f = () => 5;
     let f2 = function () {

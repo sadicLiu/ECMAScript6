@@ -1,5 +1,5 @@
 "use strict";
-/*
+/**
  * 对象的解构赋值
  * */
 function testAsignValue() {

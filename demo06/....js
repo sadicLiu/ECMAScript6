@@ -4,7 +4,9 @@
 console.log(...[1, 2, 3]);
 console.log(Math.max(...[1, 2, 3]));
 
-/*合并数组*/
+/**
+ * 合并数组
+ * */
 function testConcatArray() {
     let arr1 = ['a', 'b'];
     let arr2 = ['c'];
@@ -19,7 +21,9 @@ function testConcatArray() {
 }
 // testConcatArray();
 
-/*获取字符串的长度*/
+/**
+ * 获取字符串的长度
+ * */
 function getStringLength() {
     let string = 'hello';
     console.log([...string].length);

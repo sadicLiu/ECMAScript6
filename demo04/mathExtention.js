@@ -1,6 +1,6 @@
 "use strict";
 
-/*
+/**
  * Math.trunc方法用于去除一个数的小数部分，返回整数部分。
  * */
 function testTrunc() {
@@ -12,7 +12,7 @@ function testTrunc() {
 }
 // testTrunc();
 
-/*
+/**
  * Math.sign方法用来判断一个数到底是正数、负数、还是零
  * */
 function testSign() {

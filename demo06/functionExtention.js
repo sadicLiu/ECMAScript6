@@ -1,10 +1,10 @@
 "use strict";
 
-/*
+/**
  * ES6之前，为参数指定默认值的方式
  * */
 function testDefaultParam() {
-    /*
+    /**
      * 这种写法的缺点在于，如果参数y赋值了，但是对应的布尔值为false，则该赋值不起作用。
      * 就像上面代码的最后一行，参数y等于空字符，结果被改为默认值
      * */
@@ -19,7 +19,7 @@ function testDefaultParam() {
 }
 // testDefaultParam();
 
-/*
+/**
  * ES6的写法
  * */
 function testDefaultParamInES6() {
@@ -33,7 +33,7 @@ function testDefaultParamInES6() {
 }
 // testDefaultParamInES6();
 
-/*
+/**
  * 指定了默认值以后，函数的length属性，将返回没有指定默认值的参数个数
  * */
 function testFunctionLength() {

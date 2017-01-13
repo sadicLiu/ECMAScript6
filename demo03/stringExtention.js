@@ -1,6 +1,6 @@
 "use strict";
 
-/*
+/**
  * 模板字符串
  * */
 function testTemplateString() {
@@ -18,7 +18,7 @@ string text line 2`);
 }
 // testTemplateString();
 
-/*
+/**
  * 在模板字符串中调用函数
  * */
 function testFunctionInTemplateString() {
@@ -30,7 +30,7 @@ function testFunctionInTemplateString() {
 }
 // testFunctionInTemplateString();
 
-/*
+/**
  * ES6为字符串添加了遍历器接口，使得字符串可以被for...of循环遍历。
  * */
 function testStringIterator() {
@@ -40,7 +40,7 @@ function testStringIterator() {
 }
 // testStringIterator();
 
-/*
+/**
  * 新的api提供的函数includes(), startsWith(), endsWith()
  * */
 function testNewStringAPI() {
@@ -55,7 +55,7 @@ function testNewStringAPI() {
 }
 // testNewStringAPI();
 
-/*
+/**
  * repeat()函数
  * */
 function testRepeat() {

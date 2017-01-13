@@ -1,6 +1,6 @@
 "use strict";
 
-/*
+/**
  * 下面是一个类似数组的对象，Array.from将它转为真正的数组
  * */
 function testArrayFrom() {
@@ -21,7 +21,7 @@ function testArrayFrom() {
 }
 // testArrayFrom();
 
-/*
+/**
  * 只要是部署了Iterator接口的数据结构，Array.from都能将其转为数组
  * */
 function testArrayFrom2() {
@@ -33,7 +33,7 @@ function testArrayFrom2() {
 }
 // testArrayFrom2();
 
-/*
+/**
  * Array.from还可以接受第二个参数，作用类似于数组的map方法
  * 用来对每个元素进行处理，将处理后的值放入返回的数组
  * */
@@ -57,7 +57,7 @@ function testArrayFrom3() {
 }
 // testArrayFrom3();
 
-/*
+/**
  * 将数组中布尔值为false的成员转为0
  * */
 function testConvertArray() {
@@ -66,7 +66,7 @@ function testConvertArray() {
 }
 // testConvertArray();
 
-/*
+/**
  * 返回各种数据的类型
  * */
 function testGetTypes() {
@@ -78,7 +78,7 @@ function testGetTypes() {
 }
 // testGetTypes();
 
-/*
+/**
  * 利用Array.from方法还可以初始化一个数组
  * */
 function testInitArray() {
@@ -87,7 +87,7 @@ function testInitArray() {
 }
 // testInitArray();
 
-/*
+/**
  * Array.of方法用于将一组值，转换为数组
  * */
 function testArrayOf() {
@@ -103,7 +103,7 @@ function testArrayOf() {
 }
 // testArrayOf();
 
-/*
+/**
  * 数组实例的find方法，用于找出第一个符合条件的数组成员
  * */
 function testArrayFind() {
@@ -119,7 +119,7 @@ function testArrayFind() {
 }
 // testArrayFind();
 
-/*
+/**
  * findIndex返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1
  * */
 function testArrayFindIndex() {
@@ -132,7 +132,7 @@ function testArrayFindIndex() {
 // testArrayFindIndex();
 
 
-/*
+/**
  * fill方法使用给定值，填充一个数组
  * */
 function testArrayFill() {
@@ -141,7 +141,7 @@ function testArrayFill() {
 }
 // testArrayFill();
 
-/*
+/**
  * keys()和values()——用于遍历数组
  * */
 function testKeysAndValues() {
@@ -149,7 +149,7 @@ function testKeysAndValues() {
         console.log(index);
     }
 
-    /*for (let elem of ['a', 'b'].values()) {
+    /**for (let elem of ['a', 'b'].values()) {
      console.log(elem);
      }*/
 
@@ -159,7 +159,7 @@ function testKeysAndValues() {
 }
 // testKeysAndValues();
 
-/*
+/**
  * entries()是对键值对的遍历
  * */
 function testEntries() {
@@ -171,7 +171,7 @@ function testEntries() {
 }
 // testEntries();
 
-/*
+/**
  * Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值
  * */
 function testIncludes() {
